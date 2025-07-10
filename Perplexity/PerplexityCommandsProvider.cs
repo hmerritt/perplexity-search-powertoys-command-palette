@@ -9,20 +9,14 @@ namespace Perplexity;
 
 public partial class PerplexityCommandsProvider : CommandProvider
 {
-    private readonly ICommandItem[] _commands;
-
     public PerplexityCommandsProvider()
     {
         DisplayName = "Perplexity";
         Icon = IconHelpers.FromRelativePath("Assets\\Perplexity.png");
-        _commands = [
-            new CommandItem(new PerplexityPage()) { Title = DisplayName },
-        ];
     }
 
     public override ICommandItem[] TopLevelCommands()
     {
-        return _commands;
+        return [new PerplexityTopLevelCommandItem()];
     }
-
 }

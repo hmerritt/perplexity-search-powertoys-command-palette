@@ -4,6 +4,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Web;
+using Windows.Foundation;
 using Microsoft.CommandPalette.Extensions;
 using Microsoft.CommandPalette.Extensions.Toolkit;
 
@@ -24,15 +26,13 @@ internal sealed partial class PerplexityPage : DynamicListPage
 
     public override void UpdateSearchText(string oldSearch, string newSearch)
     {
-        // Get the current query from the context (assume it's available via Query property or similar)
-        string query = newSearch;
-        string url = $"https://www.perplexity.ai/search?q={Uri.EscapeDataString(query)}";
+        string url = $"https://www.perplexity.ai/search?q={Uri.EscapeDataString(newSearch)}";
 
         allItems = [
             new ListItem(new OpenUrlCommand(url))
             {
                 Icon = IconHelpers.FromRelativePath("Assets\\Perplexity.png"),
-                Title = $"Search Perplexity for '{query}'",
+                Title = $"Search Perplexity for '{newSearch}'",
                 Subtitle = url
             }
         ];
