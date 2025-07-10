@@ -7,16 +7,16 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Microsoft.CommandPalette.Extensions;
 
-namespace perplexity;
+namespace Perplexity;
 
-[Guid("fd806114-03d5-45e9-b505-8647b7ac8233")]
-public sealed partial class perplexity : IExtension, IDisposable
+[Guid("01bc8840-e0a6-4f8e-ab48-a5ed908c2cf3")]
+public sealed partial class Perplexity : IExtension, IDisposable
 {
     private readonly ManualResetEvent _extensionDisposedEvent;
 
-    private readonly perplexityCommandsProvider _provider = new();
+    private readonly PerplexityCommandsProvider _provider = new();
 
-    public perplexity(ManualResetEvent extensionDisposedEvent)
+    public Perplexity(ManualResetEvent extensionDisposedEvent)
     {
         this._extensionDisposedEvent = extensionDisposedEvent;
     }

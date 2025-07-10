@@ -1,10 +1,10 @@
 {
   "profiles": {
-    "perplexity (Package)": {
+    "Perplexity (Package)": {
       "commandName": "MsixPackage",
       "doNotLaunchApp": true
     },
-    "perplexity (Unpackaged)": {
+    "Perplexity (Unpackaged)": {
       "commandName": "Project"
     }
   }

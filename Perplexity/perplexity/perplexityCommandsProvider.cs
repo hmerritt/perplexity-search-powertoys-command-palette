@@ -4,66 +4,26 @@
 
 using Microsoft.CommandPalette.Extensions;
 using Microsoft.CommandPalette.Extensions.Toolkit;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using Windows.Foundation;
 
-namespace perplexity;
+namespace Perplexity;
 
-public partial class perplexityCommandsProvider : CommandProvider
+public partial class PerplexityCommandsProvider : CommandProvider
 {
-    public perplexityCommandsProvider()
+    private readonly ICommandItem[] _commands;
+
+    public PerplexityCommandsProvider()
     {
         DisplayName = "Perplexity";
-        Icon = IconHelpers.FromRelativePath("Assets\\StoreLogo.png");
+        Icon = IconHelpers.FromRelativePath("Assets\\Perplexity.png");
+        _commands = [
+            new CommandItem(new PerplexityPage()) { Title = DisplayName },
+            new CommandItem(new PerplexitySearchCommand()) { Title = "Search with Perplexity" },
+        ];
     }
 
     public override ICommandItem[] TopLevelCommands()
     {
-        return Array.Empty<ICommandItem>();
+        return _commands;
     }
 
-    public IEnumerable<ICommandItem> Commands(string query)
-    {
-        if (!string.IsNullOrWhiteSpace(query))
-        {
-            yield return new CommandItem
-            {
-                Title = $"Search Perplexity for \"{query}\"",
-                Icon = Icon,
-                Command = new PerplexityCommand($"https://www.perplexity.ai/search?q={Uri.EscapeDataString(query)}"),
-            };
-        }
-    }
-}
-
-public class PerplexityCommand : IInvokableCommand, ICommand, INotifyPropChanged
-{
-    private readonly string _url;
-
-    public string Id { get; }
-    public string Name { get; }
-    public IIconInfo Icon { get; }
-
-    public event TypedEventHandler<object, IPropChangedEventArgs>? PropChanged;
-
-    public PerplexityCommand(string url)
-    {
-        _url = url;
-        Id = Guid.NewGuid().ToString(); // Generate a unique ID
-        Name = "Perplexity Search"; // A descriptive name
-        Icon = IconHelpers.FromRelativePath("Assets\\StoreLogo.png"); // Use the same icon as the provider
-    }
-
-    public ICommandResult Invoke(object? sender)
-    {
-        using var process = new Process();
-        process.StartInfo.FileName = _url;
-        process.StartInfo.UseShellExecute = true;
-        process.Start();
-
-        return new CommandResult();
-    }
 }
