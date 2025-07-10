@@ -1,3 +1,17 @@
-# Powertoys Command Palette Plugins
+# Perplexity Search for PowerToys Command Palette
 
-Repo of plugins for the Command Palette in Powertoys.
+Search with Perplexity.
+
+```
+https://www.perplexity.ai/search?q={query}
+```
+
+## Develop
+
+```sh
+dotnet build
+```
+
+```sh
+dotnet publish
+```

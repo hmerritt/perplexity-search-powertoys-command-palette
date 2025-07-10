@@ -17,7 +17,6 @@ public partial class PerplexityCommandsProvider : CommandProvider
         Icon = IconHelpers.FromRelativePath("Assets\\Perplexity.png");
         _commands = [
             new CommandItem(new PerplexityPage()) { Title = DisplayName },
-            new CommandItem(new PerplexitySearchCommand()) { Title = "Search with Perplexity" },
         ];
     }
 

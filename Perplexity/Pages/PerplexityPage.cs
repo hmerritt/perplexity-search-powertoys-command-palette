@@ -20,7 +20,9 @@ internal sealed partial class PerplexityPage : DynamicListPage
         Name = "Open";
     }
 
-     public override void UpdateSearchText(string oldSearch, string newSearch)
+    public string? Query { get; set; }
+
+    public override void UpdateSearchText(string oldSearch, string newSearch)
     {
         // Get the current query from the context (assume it's available via Query property or similar)
         string query = newSearch;
@@ -34,6 +36,9 @@ internal sealed partial class PerplexityPage : DynamicListPage
                 Subtitle = url
             }
         ];
+
+        // Notify that the items have changed
+        RaiseItemsChanged(0);
     }
 
      public override IListItem[] GetItems() => [.. allItems];
