@@ -60,6 +60,26 @@
 
     <ILLinkTreatWarningsAsErrors>true</ILLinkTreatWarningsAsErrors>
 
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+
+    <AppxPackageSigningEnabled>False</AppxPackageSigningEnabled>
+
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+
+    <AppxBundle>Always</AppxBundle>
+
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+
+    <GenerateTemporaryStoreCertificate>True</GenerateTemporaryStoreCertificate>
+
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">

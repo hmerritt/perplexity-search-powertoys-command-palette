@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -6,15 +6,16 @@
   xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
   xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-  IgnorableNamespaces="uap uap3 rescap">
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  IgnorableNamespaces="uap uap3 rescap mp">
 
   <Identity
-    Name="Perplexity"
-    Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
-    Version="1.1.0.0" />
+    Name="HarryMerritt.PerplexitySearchforCommandPalette"
+    Publisher="CN=A75D1E9C-7706-4BFC-91D0-7BA8AC344962"
+    Version="1.1.6.0" />
 
   <Properties>
-    <DisplayName>Perplexity</DisplayName>
+    <DisplayName>Perplexity Search for Command Palette</DisplayName>
     <PublisherDisplayName>Harry Merritt</PublisherDisplayName>
     <Logo>Assets\Perplexity.png</Logo>
   </Properties>
@@ -33,12 +34,13 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="Perplexity"
-        Description="Perplexity"
+        DisplayName="Perplexity Search for Command Palette"
+        Description="Search via Perplexity when using the PowerToys Command Palette"
         BackgroundColor="transparent"
         Square44x44Logo="Assets\Perplexity.png"
         Square150x150Logo="Assets\Perplexity.png">
         <uap:SplashScreen Image="Assets\Perplexity.png" />
+        <uap:DefaultTile/>
       </uap:VisualElements>
       <Extensions>
         <com:Extension Category="windows.comServer">
@@ -74,4 +76,6 @@
     <Capability Name="internetClient" />
     <rescap:Capability Name="runFullTrust" />
   </Capabilities>
+
+  <mp:PhoneIdentity PhoneProductId="53e8082b-f175-4810-a244-a4a5bae30ae1" PhonePublisherId="A75D1E9C-7706-4BFC-91D0-7BA8AC344962" />
 </Package>
