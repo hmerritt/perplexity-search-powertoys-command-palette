@@ -12,7 +12,7 @@
   <Identity
     Name="HarryMerritt.PerplexitySearchforCommandPalette"
     Publisher="CN=A75D1E9C-7706-4BFC-91D0-7BA8AC344962"
-    Version="1.1.6.0" />
+    Version="1.1.8.0" />
 
   <Properties>
     <DisplayName>Perplexity Search for Command Palette</DisplayName>

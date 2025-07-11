@@ -17,7 +17,7 @@ internal sealed partial class PerplexityPage : DynamicListPage
 
     public PerplexityPage()
     {
-        Icon = IconHelpers.FromRelativePath("Assets\\Perplexity.png");
+        Icon = IconHelpers.FromRelativePath("Assets\\Perplexity-rounded.png");
         Title = "Perplexity";
         Name = "Open";
     }
@@ -31,7 +31,7 @@ internal sealed partial class PerplexityPage : DynamicListPage
         allItems = [
             new ListItem(new OpenUrlCommand(url))
             {
-                Icon = IconHelpers.FromRelativePath("Assets\\Perplexity.png"),
+                Icon = IconHelpers.FromRelativePath("Assets\\Perplexity-rounded.png"),
                 Title = $"Search Perplexity for '{newSearch}'",
                 Subtitle = url
             }

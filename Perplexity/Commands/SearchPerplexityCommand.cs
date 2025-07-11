@@ -14,7 +14,7 @@ internal sealed partial class SearchPerplexityCommand : InvokableCommand
     {
         Query = query;
         Name = "Perplexity";
-        Icon = IconHelpers.FromRelativePath("Assets\\Perplexity.png");
+        Icon = IconHelpers.FromRelativePath("Assets\\Perplexity-rounded.png");
         Url = $"https://www.perplexity.ai/search?q={Uri.EscapeDataString(query)}";
     }
 

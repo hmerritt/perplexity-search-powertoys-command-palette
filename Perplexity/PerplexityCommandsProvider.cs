@@ -12,7 +12,7 @@ public partial class PerplexityCommandsProvider : CommandProvider
     public PerplexityCommandsProvider()
     {
         DisplayName = "Perplexity";
-        Icon = IconHelpers.FromRelativePath("Assets\\Perplexity.png");
+        Icon = IconHelpers.FromRelativePath("Assets\\Perplexity-rounded.png");
     }
 
     public override ICommandItem[] TopLevelCommands()

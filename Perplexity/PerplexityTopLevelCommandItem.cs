@@ -18,7 +18,7 @@ public class PerplexityTopLevelCommandItem : CommandItem
         : base(new PerplexityPage())
     {
         SetDefaultTitle();
-        Icon = IconHelpers.FromRelativePath("Assets\\Perplexity.png");
+        Icon = IconHelpers.FromRelativePath("Assets\\Perplexity-rounded.png");
     }
 
     private void SetDefaultTitle() => Title = "Perplexity";
