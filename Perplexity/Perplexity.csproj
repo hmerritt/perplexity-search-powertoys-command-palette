@@ -58,15 +58,11 @@
     <!-- Suppress DynamicallyAccessedMemberTypes.PublicParameterlessConstructor in fallback code path of Windows SDK projection -->
     <WarningsNotAsErrors>IL2081;$(WarningsNotAsErrors)</WarningsNotAsErrors>
 
-    <!-- When publishing trimmed, make sure to treat trimming warnings as build errors -->
     <ILLinkTreatWarningsAsErrors>true</ILLinkTreatWarningsAsErrors>
 
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <!-- In Debug builds, trimming is disabled by default, but all the trim & 
-         AOT warnings are enabled. This gives debug builds a tighter inner loop,
-         while at least warning about future trim violations -->
     <PublishTrimmed>false</PublishTrimmed>
     
     <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
@@ -75,8 +71,6 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'!='Debug'">
-    <!-- In Release builds, trimming is enabled by default. 
-         feel free to disable this if needed -->
     <PublishTrimmed>false</PublishTrimmed>
   </PropertyGroup>
 
