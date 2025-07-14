@@ -2,7 +2,7 @@
 
 Search via Perplexity when using the PowerToys Command Palette.
 
-<img width="1366" height="768" alt="perplexity-search-powertoys-command-palette" src="https://github.com/user-attachments/assets/269ecae7-9c63-4541-8e9e-d82da6e242b2" />
+<img width="1366" height="768" alt="perplexity-search-powertoys-command-palette" src="https://github.com/user-attachments/assets/92477d83-ccc4-4c9f-81f4-15a83e4dd4c9" />
 
 https://github.com/user-attachments/assets/13ff2948-2c00-457a-8c62-6a990c1a7ea2
 
